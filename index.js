@@ -119,6 +119,77 @@ function katas7() {
 
 katas7();
 
+//KATA 8
+
+function katas8() {
+    lotrCitiesArray.splice(lotrCitiesArray.indexOf("Rohan"), 1);
+
+    printKata(8, JSON.stringify(lotrCitiesArray))
+}
+
+katas8();
+
+//KATA 9 
+
+function katas9() {
+    const startingIndex = lotrCitiesArray.indexOf("Dead Marshes") + 1; 
+    const numberOfCitiesToDelete = lotrCitiesArray.length - startingIndex;  
+    
+    lotrCitiesArray.splice(startingIndex, numberOfCitiesToDelete)
+    
+    printKata(9, JSON.stringify(lotrCitiesArray))
+}
+
+katas9();
+
+//KATA 10
+
+function katas10() { 
+   const startingIndex = lotrCitiesArray.indexOf("Gondor") + 1; 
+   lotrCitiesArray.splice(startingIndex, 0, "Rohan"); 
+
+   printKata(10, JSON.stringify(lotrCitiesArray));
+}
+
+katas10();
+
+//KATA 11
+
+function katas11() {
+    const startingIndex = lotrCitiesArray.indexOf("Dead Marshes"); 
+    lotrCitiesArray.splice(startingIndex, 1, "Deadest Marshes"); 
+
+    printKata(11, JSON.stringify(lotrCitiesArray)); 
+}
+
+katas11(); 
+
+//KATA 12
+
+function katas12(){
+    const first14Characters = bestThing.slice(0, 13 + 1); 
+    printKata(12, JSON.stringify(first14Characters)); 
+}
+
+katas12();
+
+//KATA 13 
+ 
+function katas13(){
+    const last12Characters = bestThing.slice(-12); 
+    printKata(13, JSON.stringify(last12Characters)); 
+
+}
+
+katas13(); 
+
+//KATA 14 
+
+function katas14(){
+    
+
+    printKata(14, JSON.stringify())
+}
 
 
 function printKata(kataNumber, resultString) {
@@ -134,3 +205,4 @@ function printKata(kataNumber, resultString) {
 
     container.appendChild(resultElement);
 }
+
