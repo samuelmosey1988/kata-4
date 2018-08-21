@@ -1,9 +1,7 @@
 const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qarth,Meereen";
 const lotrCitiesArray = ["Mordor", "Gondor", "Rohan", "Beleriand", "Mirkwood", "Dead Marshes", "Rhun", "Harad"];
 const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
-
 const container = document.querySelector("main");
-
 const katas = {
     1: function () {
         const arrayifiedString = gotCitiesCSV.split(",");
@@ -23,6 +21,20 @@ function executeKatas() {
     for (let kataNumber in katas) {
         katas[kataNumber]();
     }
+}
+
+function printKata(kataNumber, resultString) {
+    const kataHeading = document.createElement("span");
+    kataHeading.textContent = "Kata " + kataNumber + ": ";
+    kataHeading.className = "kata-heading";
+
+    const resultElement = document.createElement("article");
+    resultElement.appendChild(kataHeading);
+
+    const textNode = document.createTextNode(resultString);
+    resultElement.appendChild(textNode);
+
+    container.appendChild(resultElement);
 }
 
 //KATA 1
@@ -186,23 +198,52 @@ katas13();
 //KATA 14 
 
 function katas14(){
-    
-
-    printKata(14, JSON.stringify())
+    bestThing.slice(22,38)    
+    printKata(14, bestThing.slice(22,38))
 }
 
+katas14();
 
-function printKata(kataNumber, resultString) {
-    const kataHeading = document.createElement("span");
-    kataHeading.textContent = "Kata " + kataNumber + ": ";
-    kataHeading.className = "kata-heading";
+//KATA 15
 
-    const resultElement = document.createElement("article");
-    resultElement.appendChild(kataHeading);
+function katas15(){
+    let last12Characters = bestThing.substring(bestThing.length - 13)
+    printKata(15, last12Characters);
+     
+}
 
-    const textNode = document.createTextNode(resultString);
-    resultElement.appendChild(textNode);
+katas15();
 
-    container.appendChild(resultElement);
+//KATA 16
+
+function katas16(){
+    bestThing.slice(22,38)    
+    printKata(16, bestThing.slice(22,38))
+}
+
+katas16(); 
+
+//KATA 17
+
+function katas17(){
+    bestThing.indexOf("only")
+    printKata(17, bestThing.indexOf("only"))
+}
+
+katas17();
+
+//KATA 18
+
+function katas18(){
+    bestThing.indexOf("bit")
+    printKata(18, bestThing.indexOf("bit"))    
+}
+
+katas18();
+
+//KATA 19
+
+function katas19(){
+    
 }
 
